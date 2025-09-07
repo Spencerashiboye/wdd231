@@ -29,11 +29,6 @@ header{
 
 .hamburger {
     display: none;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
 }
 
 nav ul {
@@ -49,7 +44,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -111,4 +106,32 @@ footer {
 
 .filter-buttons button:hover {
     background-color: #1b577f;
+}
+
+@media (max-width: 768px) {
+    .hamburger{
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.active {
+        display: block;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin:0.5rem 0;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
 }
