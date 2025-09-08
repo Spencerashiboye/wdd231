@@ -2,22 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewpot" content="width=device-width, initial-scale=1.0">
-        <title>WDD 231:Web Frontend Development 1 - Ashiboye Spencer</title>
-        <meta name="discription" content="WDD 231 - Web Frontend Development 1 by Ashiboye Spencer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 231: Web Frontend Development 1 - Ashiboye Spencer</title>
+        <meta name="description" content="WDD 231 - Web Frontend Development 1 by Ashiboye Spencer">
         <meta name="author" content="Ashiboye Spencer">
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/index-small.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
         <script src="scripts/index.js" defer></script>
     </head>
     <body>
         <header>
            <div class="logo">
-            <img src="" alt="" width="50" height="50">
+            <img src="images/Rapids_logo.jpg" alt="Rapids Logo for Ashiboye Spencer's Portfolio" width="50" height="50" loading="lazy">
            </div> 
            <span class="name">Ashiboye Spencer</span>
-           <button class="hamburger">☰</button>
+           <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
            <nav>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -31,19 +31,19 @@
             <div class="content-wrapper">
                 <section class="about-me">
                     <h2>About Me</h2>
-                    <p></p>
+                    <p>Ashiboye Spencer, a proud native of Accra, Ghana, resides there with his loving family. As a dedicated student at BYU Idaho and a part-time teacher, he balances his academic pursuits with his passion for football and quality time with his family. His enthusiasm for learning new things continues to drive his personal and professional growth.</p>
                 </section>
                 <section class="student-photo">
                     <h2>Student Photo</h2>
-                    <img src="" alt="">
+                    <img src="images/profile.png" alt="Photo of Ashiboye Spencer, Web Development Student" width="300" height="300" loading="lazy">
                 </section>
             </div>
-            <section>
-                <h2>MDN Reference</h2>
-                <p>Check out my <a href="chamber.html">Chamber of Commerce</a> and <a href="final.html">Final Project</a>.</p>
-            </section>
+            <!-- <section> -->
+                <!-- <h2>MDN Reference</h2> -->
+                <!-- <p>Check out my <a href="chamber.html">Chamber of Commerce</a> and <a href="final.html">Final Project</a>.</p> -->
+            <!-- </section> -->
             <section id="certificate">
-                <h2>Web and Computer Programming Certificate </h2>
+                <h2>Web and Computer Programming Certificate</h2>
                 <div class="filter-buttons">
                     <button onclick="filterCourses('all')">All Courses</button>
                     <button onclick="filterCourses('WDD')">WDD Courses</button>
@@ -52,16 +52,16 @@
                 <p id="total-credits">Total Credits: <span id="credit-count">0</span></p>
                 <div id="course-list" class="course-grid"></div>
             </section>
+             <div class="social-links">
+                <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Visit my Facebook profile"><img src="images/rb_349-min2.png" alt="Facebook Icon" width="30" height="30" loading="lazy"></a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Visit my Instagram profile"><img src="images/rb_349-min3.png" alt="Instagram Icon" width="30" height="30" loading="lazy"></a>
+                <a href="https://x.com/yourprofile" target="_blank" aria-label="Visit my X (Twitter) profile"><img src="images/rb_349-min4.png" alt="X (Twitter) Icon" width="30" height="30" loading="lazy"></a>
+            </div>
         </main>
         <footer>
-            <div class="social-links">
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-            </div>
-            <p>&copy; <span id="current-year"></span> 💚Ashiboye Spencer💚 Accra,Ghana </p>
+           
+            <p>&copy; <span id="current-year"></span> 💚Ashiboye Spencer💚 Accra, Ghana</p>
             <p id="lastModified"></p>
         </footer>
     </body>
-    </html>
+</html>
