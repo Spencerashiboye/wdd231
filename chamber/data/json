@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Accra Tech Solutions",
+        "address": "12 Tech Ave, Accra, Ghana",
+        "phone": "+233 555 123 456",
+        "website": "https://accratechsolutions.com",
+        "image": "images/member1.jpg",
+        "membershipLevel": 3,
+        "description": "Leading IT services provider in Accra."
+    },
+    {
+        "name": "Ghana Crafts Hub",
+        "address": "45 Artisan Rd, Accra, Ghana",
+        "phone": "+233 555 234 567",
+        "website": "https://ghanacraftshub.com",
+        "image": "images/member2.jpg",
+        "membershipLevel": 2,
+        "description": "Handcrafted goods from local artisans."
+    },
+    {
+        "name": "Eco Farms Ghana",
+        "address": "78 Farm Lane, Accra, Ghana",
+        "phone": "+233 555 345 678",
+        "website": "https://ecofarmsgh.com",
+        "image": "images/member3.jpg",
+        "membershipLevel": 1,
+        "description": "Sustainable agriculture solutions."
+    },
+    {
+        "name": "Bright Future School",
+        "address": "90 Education St, Accra, Ghana",
+        "phone": "+233 555 456 789",
+        "website": "https://brightfutureschool.com",
+        "image": "images/member4.jpg",
+        "membershipLevel": 2,
+        "description": "Quality education for all ages."
+    },
+    {
+        "name": "Accra Health Clinic",
+        "address": "15 Health Rd, Accra, Ghana",
+        "phone": "+233 555 567 890",
+        "website": "https://accrahealthclinic.com",
+        "image": "images/member5.jpg",
+        "membershipLevel": 3,
+        "description": "Premier healthcare services."
+    },
+    {
+        "name": "Ghana Travel Agency",
+        "address": "33 Tourism Blvd, Accra, Ghana",
+        "phone": "+233 555 678 901",
+        "website": "https://ghanatravelagency.com",
+        "image": "images/member6.jpg",
+        "membershipLevel": 1,
+        "description": "Explore Ghana with us."
+    },
+    {
+        "name": "Urban Builders Ltd",
+        "address": "67 Construction St, Accra, Ghana",
+        "phone": "+233 555 789 012",
+        "website": "https://urbanbuildersgh.com",
+        "image": "images/member7.jpg",
+        "membershipLevel": 2,
+        "description": "Construction and renovation experts."
+    }
+]

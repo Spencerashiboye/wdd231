@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 231: Web Frontend Development 1 - Ashiboye Spencer</title>
+        <meta name="description" content="WDD 231 - Web Frontend Development 1 by Ashiboye Spencer">
+        <meta name="author" content="Ashiboye Spencer">
+        <meta property="">
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/index-small.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <script src="scripts/index.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo-container">
+                <img src="" alt="">
+                <h1>Accra Chamber of Commerce</h1>
+            </div>
+            <nav>
+                <button id="humburger-menu">☰</button>
+                <ul id="main-nav" class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                     <li><a href="directory.html">Directory</a></li>
+                      <li><a href="#">Join</a></li>
+                       <li><a href="#">Discovery</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="dark-mode-toggle">🌙</button>
+            </div>
+        </header>
+        <main class="directory-main">
+            <div class="directory-controls">
+                <button id="grid-view" class="active">Grid View</button>
+                <button id="list-view">List View</button>
+            </div>
+            <div id="member-directory" class="grid-view"></div>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h4>Accra Chamber of Commerce</h4>
+                    <p>10 Rue De La Paix</p>
+                    <p>Accra, Ghana 2003</p>
+                    <p>Email: info@Accrac.org</p>
+                    <p>Phone: (233) 540237938</p>
+                </div>
+                <div class="social-media">
+                    <a href="#"><img src="" alt=""></a>
+                    <a href="#"><img src="" alt=""></a>
+                    <a href="#"><img src="" alt=""></a>
+                </div>
+            </div>
+            <div class="developer-info">
+                <p>WDD 231 Project 💚 Ashiboye Spencer 💚</p>
+                <p>&copy; <span id="current-year"></span> Accra Chamber of Commerce</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
+            </div> 
+        </footer>
+    </body>
