@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Accra Tech Solutions",
+        "address": "12 Tech Ave, Accra, Ghana",
+        "phone": "+233 555 123 456",
+        "website": "https://accratechsolutions.com",
+        "image": "tech.jpg",
+        "membershipLevel": 3,
+        "description": "Leading IT services provider in Accra."
+    },
+    {
+        "name": "Ghana Crafts Hub",
+        "address": "45 Artisan Rd, Accra, Ghana",
+        "phone": "+233 555 234 567",
+        "website": "https://ghanacraftshub.com",
+        "image": "gh-craft.jpg",
+        "membershipLevel": 2,
+        "description": "Handcrafted goods from local artisans."
+    },
+    {
+        "name": "Eco Farms Ghana",
+        "address": "78 Farm Lane, Accra, Ghana",
+        "phone": "+233 555 345 678",
+        "website": "https://ecofarmsgh.com",
+        "image": "eco-farm.jpg",
+        "membershipLevel": 1,
+        "description": "Sustainable agriculture solutions."
+    }
+]

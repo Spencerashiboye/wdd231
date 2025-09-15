@@ -1,0 +1,110 @@
+/* Mobile-first styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #004080;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+#humburger-menu {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.theme-toggle {
+  margin-top: 1rem;
+}
+
+.home-section {
+  padding: 2rem;
+  background-color: #f0f8ff;
+}
+
+.home-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #004080;
+}
+
+.home-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.home-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.home-box h3 {
+  margin-top: 0;
+  color: #0077cc;
+}
+
+.home-box ul {
+  padding-left: 1rem;
+}
+
+.directory-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+#members.grid-view {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #004080;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.5rem;
+}

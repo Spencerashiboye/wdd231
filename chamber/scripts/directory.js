@@ -1,75 +1,58 @@
-// Fetch and display members
-async function loadMembers() {
+document.addEventListener("DOMContentLoaded", () => {
+  const membersContainer = document.getElementById("members");
+  const gridBtn = document.getElementById("gridView");
+  const listBtn = document.getElementById("listView");
+
+  async function loadMembers() {
     try {
-        const response = await fetch('data/members.json');
-        const members = await response.json();
-        displayMembers(members, 'grid');
+      const response = await fetch("data/members.json");
+      if (!response.ok) throw new Error("Failed to fetch members data.");
+      const members = await response.json();
+      displayMembers(members);
     } catch (error) {
-        console.error('Error loading members:', error);
+      console.error("Error loading members:", error);
+      membersContainer.innerHTML = `<p class="error">Unable to load member data.</p>`;
     }
-}
+  }
 
-// Display members based on view type
-function displayMembers(members, viewType) {
-    const memberList = document.getElementById('member-list');
-    memberList.innerHTML = '';
-    memberList.className = `member-${viewType}`;
-
+  function displayMembers(members) {
+    membersContainer.innerHTML = "";
     members.forEach(member => {
-        const card = document.createElement('div');
-        card.className = `member-card membership-level-${member.membershipLevel}`;
-        card.innerHTML = `
-            <img src="${member.image}" alt="Photo of ${member.name}">
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>Phone: ${member.phone}</p>
-            <p><a href="${member.website}" target="_blank">Website</a></p>
-            <p>${member.description}</p>
-        `;
-        memberList.appendChild(card);
+      const card = document.createElement("div");
+      card.classList.add("member-card");
+      card.innerHTML = `
+        <img src="images/${member.image}" alt="${member.name}" width="100" />
+        <h2>${member.name}</h2>
+        <p>${member.tagline}</p>
+        <p>📍 ${member.address}</p>
+        <p>📞 ${member.phone}</p>
+        <p>🌐 <a href="${member.website}" target="_blank">${member.website}</a></p>
+        <p>Membership Level: ${["Member", "Silver", "Gold"][member.membership - 1]}</p>
+      `;
+      membersContainer.appendChild(card);
     });
-}
+  }
 
-// Toggle view type
-function setupViewToggle() {
-    const gridViewBtn = document.getElementById('grid-view');
-    const listViewBtn = document.getElementById('list-view');
-
-    gridViewBtn.addEventListener('click', () => {
-        loadMembers(); // Reload with grid view
+  if (gridBtn && listBtn && membersContainer) {
+    gridBtn.addEventListener("click", () => {
+      membersContainer.classList.add("grid-view");
+      membersContainer.classList.remove("list-view");
     });
 
-    listViewBtn.addEventListener('click', () => {
-        loadMembers().then(() => {
-            document.getElementById('member-list').className = 'member-list';
-        });
+    listBtn.addEventListener("click", () => {
+      membersContainer.classList.add("list-view");
+      membersContainer.classList.remove("grid-view");
     });
-}
+  }
 
-// Dynamic footer content
-function updateFooter() {
-    document.getElementById('current-year').textContent = new Date().getFullYear(); // 2025
-    document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
-}
+  document.addEventListener("DOMContentLoaded", () => {
+  const yearSpan = document.getElementById("current-year");
+  const modifiedSpan = document.getElementById("last-modified");
 
-// Initialize page
-document.addEventListener('DOMContentLoaded', () => {
-    loadMembers();
-    setupViewToggle();
-    updateFooter();
-
-    // Hamburger menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav');
-    if (hamburger && nav) {
-        hamburger.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-    }
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  if (modifiedSpan) modifiedSpan.textContent = document.lastModified;
 });
 
-// Last Modification Date
-document.getElementById('last-modified').textContent = new Date(document.lastModified).toLocaleDateString();
+  loadMembers();
+  });
 
-// Copyright Year
-document.getElementById('current-year').textContent = new Date().getFullYear();

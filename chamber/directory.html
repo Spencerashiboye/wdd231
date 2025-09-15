@@ -6,17 +6,23 @@
         <title>WDD 231: Web Frontend Development 1 - Ashiboye Spencer</title>
         <meta name="description" content="WDD 231 - Web Frontend Development 1 by Ashiboye Spencer">
         <meta name="author" content="Ashiboye Spencer">
-        <meta property="">
-        <link rel="stylesheet" href="styles/index.css">
-        <link rel="stylesheet" href="styles/index-small.css">
+        
+        <meta property="og:title" content="WDD 231: Web Frontend Development 1 - Ashiboye Spencer" />
+        <meta property="og:description" content="WDD 231 - Web Frontend Development 1 by Ashiboye Spencer" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="https://spencerashiboye.github.io/wdd231/chamber/directory.html" />
+        <meta property="og:type" content="website" />
+
+        <link rel="stylesheet" href="styles/directory-mobile.css">
+        <link rel="stylesheet" href="styles/directory.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-        <script src="scripts/index.js" defer></script>
+        <script src="scripts/directory.js" defer></script>
     </head>
     <body>
         <header>
             <div class="logo-container">
-                <img src="" alt="">
+                <img src="images/rapids_logo.jpg" alt="" width="50" height="50">
                 <h1>Accra Chamber of Commerce</h1>
             </div>
             <nav>
@@ -32,12 +38,50 @@
                 <button id="dark-mode-toggle">🌙</button>
             </div>
         </header>
+        <section class="hero">
+            <img src="images/market.small.webp" alt="Accra cityscape with business district" class="hero-image" width="100%" height="500">
+            <div class="hero-text">
+            <!-- <h2>Empowering Accra's Business Community</h2> -->
+            <!-- <p>Join us in building a vibrant, connected economy.</p> -->
+            <!-- <a href="#" class="hero-button">Join the Chamber</a> -->
+            </div>
+        </section>
+        <section class="home-section">
+            <h2>Home</h2>
+            <div class="home-columns">
+                <div class="home-box events">
+                    <h3>📅 Events</h3>
+                    <ul>
+                        <li>Oct 1: Fall Festival</li>
+                        <li>Oct 15: Business Mixer</li>
+                        <li>Nov 1: Keynote Speaker</li>
+                    </ul>
+                </div>
+                <div class="home-box current-weather">
+                    <h3>🌤️ Current Weather</h3>
+                    <p>Temperature: 75°F</p>
+                    <p>Condition: Partly Cloudy</p>
+                    <p>High: 82°F | Low: 52°F</p>
+                    <p>Humidity: 45%</p>
+                    <p>Sunrise: 7:30am</p>
+                    <p>Sunset: 9:59pm</p>
+                </div>
+                <div class="home-box forecast">
+                    <h3>🌡️ Weather Forecast</h3>
+                    <ul>
+                        <li>Today: 90°F</li>
+                        <li>Wednesday: 89°F</li>
+                        <li>Friday: 86°F</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <main class="directory-main">
             <div class="directory-controls">
                 <button id="grid-view" class="active">Grid View</button>
                 <button id="list-view">List View</button>
             </div>
-            <div id="member-directory" class="grid-view"></div>
+            <div id="members" class="grid-view"></div>
         </main>
         <footer>
             <div class="footer-content">
@@ -49,9 +93,9 @@
                     <p>Phone: (233) 540237938</p>
                 </div>
                 <div class="social-media">
-                    <a href="#"><img src="" alt=""></a>
-                    <a href="#"><img src="" alt=""></a>
-                    <a href="#"><img src="" alt=""></a>
+                    <a href="#"><img src="images/rb_349-min2.png" alt="facebook"></a>
+                    <a href="#"><img src="images/rb_349-min3.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/rb_349-min4.png" alt="Twitter"></a>
                 </div>
             </div>
             <div class="developer-info">
@@ -61,3 +105,4 @@
             </div> 
         </footer>
     </body>
+</html>
