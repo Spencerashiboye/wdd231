@@ -25,5 +25,41 @@
         "image": "eco-farm.jpg",
         "membershipLevel": 1,
         "description": "Sustainable agriculture solutions."
+    },
+    {
+        "name": "Savanna Solar Systems",
+        "address": "19 Solar St, Accra, Ghana",
+        "phone": "+233 555 456 789",
+        "website": "https://savannasolar.com",
+        "image": "solar.png",
+        "membershipLevel": 2,
+        "description": "Renewable energy solutions for homes and businesses."
+    },
+    {
+        "name": "Accra Health Clinic",
+        "address": "33 Wellness Rd, Accra, Ghana",
+        "phone": "+233 555 567 890",
+        "website": "https://accrahealthclinic.com",
+        "image": "health.jpg",
+        "membershipLevel": 3,
+        "description": "Quality healthcare services with modern facilities."
+    },
+    {
+        "name": "Gold Coast Tours",
+        "address": "56 Travel Ave, Accra, Ghana",
+        "phone": "+233 555 678 901",
+        "website": "https://goldcoasttours.com",
+        "image": "tours.jpg",
+        "membershipLevel": 1,
+        "description": "Guided cultural and historical tours across Ghana."
+    },
+    {
+        "name": "Nile Textiles",
+        "address": "27 Fabric Lane, Accra, Ghana",
+        "phone": "+233 555 789 012",
+        "website": "https://niletextiles.com",
+        "image": "market.small.webp",
+        "membershipLevel": 2,
+        "description": "Authentic Ghanaian textiles and fashion designs."
     }
 ]
