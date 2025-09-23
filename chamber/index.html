@@ -15,12 +15,12 @@
 
         <link rel="icon" href="images/rapids_logo.jpg" type="image/x-icon">
 
-        <link rel="stylesheet" href="styles/directory-mobile.css">
-        <link rel="stylesheet" href="styles/directory.css">
+        <link rel="stylesheet" href="styles/index-mobile.css">
+        <link rel="stylesheet" href="styles/index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-        <script src="scripts/directory.js" defer></script>
+        <script src="scripts/index.js" defer></script>
     </head>
     <body>
         <header>
@@ -42,7 +42,7 @@
             </div>
         </header>
         <section class="hero">
-            <img src="" alt="">
+            <img src="images/market.small.webp" alt="" class="hero-image">
             <div class="hero-text">
                 <h2>Empowering Accra's Business Community</h2>
                 <a href="" class="cta-button">Join the Chamber</a>
@@ -59,7 +59,7 @@
                         <li>Nov 1: Keynote Speaker</li>
                     </ul>
                 </div>
-                <section class="weather">
+                <div class="home-box weather">
                     <h3>🌤️ Current Weather</h3>
                     <p id="current-temp"></p>
                     <p id="weather-desc"></p>
@@ -67,11 +67,12 @@
                         <h4>3-Day Forecast</h4>
                         <ul id="forecast-list"></ul>
                     </div>
-                </section>
-                <section class="spotlights">
+                </div>
+                <div class="home-box spotlights-container">
                     <h3>🌟 Member Spotlights</h3>
-                    <div id="spotlights-container"></div>
-                </section>
+                    <div id="spotlight-card"></div>
+                </div>
+
             </div>
         </section>
         <main class="directory-main">

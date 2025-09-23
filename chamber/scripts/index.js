@@ -73,48 +73,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadMembers();
 });
-const apiKey = "YOUR_API_KEY";
+const apiKey = "YOUR_VALID_API_KEY"; // Replace with your actual API key
 const city = "Accra";
 const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
 async function loadWeather() {
-  const weatherRes = await fetch(weatherURL);
-  const weatherData = await weatherRes.json();
-  document.getElementById("current-temp").textContent = `Temperature: ${weatherData.main.temp}°C`;
-  document.getElementById("weather-desc").textContent = `Condition: ${weatherData.weather[0].description}`;
+  try {
+    const weatherRes = await fetch(weatherURL);
+    if (!weatherRes.ok) throw new Error("Weather API fetch failed.");
+    const weatherData = await weatherRes.json();
+    document.getElementById("current-temp").textContent = `Temperature: ${weatherData.main.temp}°C`;
+    document.getElementById("weather-desc").textContent = `Condition: ${weatherData.weather[0].description}`;
 
-  const forecastRes = await fetch(forecastURL);
-  const forecastData = await forecastRes.json();
-  const forecastList = document.getElementById("forecast-list");
-  forecastList.innerHTML = "";
+    const forecastRes = await fetch(forecastURL);
+    if (!forecastRes.ok) throw new Error("Forecast API fetch failed.");
+    const forecastData = await forecastRes.json();
+    const forecastList = document.getElementById("forecast-list");
+    forecastList.innerHTML = "";
 
-  const daily = forecastData.list.filter((item, index) => index % 8 === 0).slice(0, 3);
-  daily.forEach(day => {
-    const date = new Date(day.dt_txt).toLocaleDateString();
-    forecastList.innerHTML += `<li>${date}: ${day.main.temp}°C</li>`;
-  });
+    const daily = forecastData.list.filter((item, index) => index % 8 === 0).slice(0, 3);
+    daily.forEach(day => {
+      const date = new Date(day.dt_txt).toLocaleDateString();
+      forecastList.innerHTML += `<li>${date}: ${day.main.temp}°C</li>`;
+    });
+  } catch (error) {
+    console.error("Error loading weather:", error);
+  }
 }
 loadWeather();
-async function loadSpotlights() {
-  const res = await fetch("data/members.json");
-  const members = await res.json();
-  const eligible = members.filter(m => m.membership === 2 || m.membership === 3);
-  const shuffled = eligible.sort(() => 0.5 - Math.random()).slice(0, 3);
 
-  const container = document.getElementById("spotlight-container");
-  container.innerHTML = "";
-  shuffled.forEach(member => {
-    container.innerHTML += `
-      <div class="spotlight-card">
-        <img src="images/${member.image}" alt="${member.name}" />
-        <h4>${member.name}</h4>
-        <p>${member.address}</p>
-        <p>${member.phone}</p>
-        <a href="${member.website}" target="_blank">${member.website}</a>
-        <p>Membership Level: ${["Member", "Silver", "Gold"][member.membership - 1]}</p>
-      </div>
-    `;
-  });
+async function loadSpotlights() {
+  try {
+    const res = await fetch("data/members.json");
+    if (!res.ok) throw new Error("Failed to fetch spotlight data.");
+    const members = await res.json();
+    const eligible = members.filter(m => m.membership === 2 || m.membership === 3);
+    const shuffled = eligible.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+    const container = document.getElementById("spotlights-container");
+    container.innerHTML = "";
+    shuffled.forEach(member => {
+      container.innerHTML += `
+        <div class="spotlight-card">
+          <img src="images/${member.image}" alt="${member.name}" />
+          <h4>${member.name}</h4>
+          <p>${member.address}</p>
+          <p>${member.phone}</p>
+          <a href="${member.website}" target="_blank">${member.website}</a>
+          <p>Membership Level: ${["Member", "Silver", "Gold"][member.membership - 1]}</p>
+        </div>
+      `;
+    });
+  } catch (error) {
+    console.error("Error loading spotlights:", error);
+  }
 }
 loadSpotlights();
+
