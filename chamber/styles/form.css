@@ -1,0 +1,59 @@
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  #humburger-menu {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+    .membership-form {
+    padding: 2rem;
+  }
+
+  .membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  header, footer {
+    text-align: left;
+  }
+
+    footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-content {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .developer-info {
+    text-align: right;
+    flex: 1;
+  }
+}

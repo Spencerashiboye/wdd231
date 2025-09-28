@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231:  Accra Chamber of Commerce </title>
+    <meta name="description" content="WDD 231 - Web Frontend Development 1 by Ashiboye Spencer">
+    <meta name="author" content="Ashiboye Spencer">
+        
+    <meta property="og:title" content="WDD 231: Web Frontend Development 1 - Ashiboye Spencer" />
+    <meta property="og:description" content="WDD 231 - Web Frontend Development 1 by Ashiboye Spencer" />
+    <meta property="og:images" content="images/market.small.webp"/>
+    <meta property="og:url" content="https://spencerashiboye.github.io/wdd231/chamber/directory.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="images/rapids_logo.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/form.mobile.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/form.js" defer></script> 
+</head>
+<body>
+  <header>
+     <div class="logo-container">
+         <img src="images/rapids_logo.jpg" alt=".." width="50" height="50">
+         <h1>WDD 231: Accra Chamber of Commerce</h1>
+     </div>
+     <nav>
+         <button id="humburger-menu">☰</button>
+         <ul id="main-nav" class="nav-links">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="directory.html">Directory</a></li>
+             <li><a href="#">Join</a></li>
+             <li><a href="#">Discovery</a></li>
+         </ul>
+     </nav>
+     <div class="theme-toggle">
+         <button id="dark-mode-toggle">🌙</button>
+    </div>
+  </header>  
+  <main class="form-layout">
+    <form method="get" action="thankyou.html" class="membership-form">
+      <h1>Apply for Membership</h1>
+
+      <label>
+        First Name:
+        <input type="text" name="firstName" title="First Name" required autocomplete="given-name">
+      </label>
+
+      <label>
+        Last Name:
+        <input type="text" name="lastName" title="Last Name" required autocomplete="family-name">
+      </label>
+
+      <label>
+        Organizational Title:
+        <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title"
+               pattern="[A-Za-z\s\-]{7,}">
+      </label>
+
+      <label>
+        Email:
+        <input type="email" name="email" title="Email Address" required autocomplete="email"
+               placeholder="example@domain.com">
+      </label>
+
+      <label>
+        Mobile Phone:
+        <input type="tel" name="phone" title="Mobile Phone" required autocomplete="tel">
+      </label>
+
+      <label>
+        Organization Name:
+        <input type="text" name="organization" title="Organization Name" required autocomplete="organization">
+      </label>
+
+      <label>
+        Membership Level:
+        <select name="membershipLevel" title="Membership Level">
+          <option value="NP">NP Membership (Free)</option>
+          <option value="Bronze">Bronze Membership</option>
+          <option value="Silver">Silver Membership</option>
+          <option value="Gold">Gold Membership</option>
+        </select>
+      </label>
+
+      <label>
+        Organization Description:
+        <textarea name="description" title="Organization Description"></textarea>
+      </label>
+
+      <input type="hidden" name="timestamp" id="timestamp">
+
+      <input type="submit" value="Submit Application">
+    </form>
+
+    <section class="membership-cards">
+      <div class="card" id="np-card">
+        <h3>NP Membership</h3>
+        <a href="#np-modal">View Benefits</a>
+      </div>
+      <div class="card" id="bronze-card">
+        <h3>Bronze Membership</h3>
+        <a href="#bronze-modal">View Benefits</a>
+      </div>
+      <div class="card" id="silver-card">
+        <h3>Silver Membership</h3>
+        <a href="#silver-modal">View Benefits</a>
+      </div>
+      <div class="card" id="gold-card">
+        <h3>Gold Membership</h3>
+        <a href="#gold-modal">View Benefits</a>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="np-modal" class="modal">
+      <div class="modal-content">
+        <h2>NP Membership Benefits</h2>
+        <p>Free access to networking events and community forums.</p>
+        <a href="#" class="close">Close</a>
+      </div>
+    </div>
+
+    <div id="bronze-modal" class="modal">
+      <div class="modal-content">
+        <h2>Bronze Membership Benefits</h2>
+        <p>Includes NP benefits plus training sessions and event discounts.</p>
+        <a href="#" class="close">Close</a>
+      </div>
+    </div>
+
+    <div id="silver-modal" class="modal">
+      <div class="modal-content">
+        <h2>Silver Membership Benefits</h2>
+        <p>Includes Bronze benefits plus homepage spotlight and advertising credits.</p>
+        <a href="#" class="close">Close</a>
+      </div>
+    </div>
+
+    <div id="gold-modal" class="modal">
+      <div class="modal-content">
+        <h2>Gold Membership Benefits</h2>
+        <p>All benefits plus VIP access to events and premium training packages.</p>
+        <a href="#" class="close">Close</a>
+      </div>
+    </div>
+    <form action="thank-you.html" method="post"></form>  
+  </main>
+  <footer>
+    <div class="footer-content">
+        <div class="contact-info">
+            <h4>Accra Chamber of Commerce</h4>
+            <p>10 Rue De La Paix</p>
+            <p>Accra, Ghana 2003</p>
+            <p>Email: info@Accrac.org</p>
+            <p>Phone: (233) 540237938</p>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="images/rb_349-min2.png" alt="facebook"></a>
+            <a href="#"><img src="images/rb_349-min3.png" alt="Instagram"></a>
+            <a href="#"><img src="images/rb_349-min4.png" alt="Twitter"></a>
+        </div>
+    </div>
+    <div class="developer-info">
+        <p>WDD 231 Project 💚 Ashiboye Spencer 💚</p>
+        <p>&copy; <span id="current-year"></span> Accra Chamber of Commerce</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </div> 
+  </footer>
+</body>
+</html>
