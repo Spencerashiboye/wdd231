@@ -1,0 +1,22 @@
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+      padding: 2rem;
+    }
+    h1, h2 {
+      font-family: 'Merriweather', serif;
+      color: #8b0000;
+    }
+    section {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1rem;
+    }
+    .color-box {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
